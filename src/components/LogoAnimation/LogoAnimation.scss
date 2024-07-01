@@ -1,0 +1,92 @@
+.logo-animation-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+    z-index: 9999;
+    opacity: 1;
+    transition: opacity 1.5s ease-in-out; 
+}
+
+.logo-animation-container.fade-out {
+    opacity: 0;
+}
+
+.logo {
+    position: relative;
+    width: 300px;
+    height: 300px;
+}
+
+.letter {
+    position: absolute;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+.letter.j {
+    width: 95px;
+    height: 130px;
+    top: 33%; /* Ajustement de la position */
+    left: 20%; /* Ajustement de la position */
+    animation-name: slide-in-bottom-left;
+}
+
+.letter.y {
+    width: 150px;
+    height: 150px;
+    top: 20%; /* Ajustement de la position */
+    left: 35%; /* Ajustement de la position */
+    animation-name: slide-in-top-right;
+}
+
+.circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    background-size: contain;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    opacity: 0;
+    animation: fade-in-circle 2s ease-in-out forwards;
+    animation-delay: 2s;
+}
+
+@keyframes slide-in-bottom-left {
+    0% {
+        transform: translate(-100%, 100%) scale(0.5);
+        opacity: 0;
+    }
+    100% {
+        transform: translate(0, 0) scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes slide-in-top-right {
+    0% {
+        transform: translate(100%, -100%) scale(0.5);
+        opacity: 0;
+    }
+    100% {
+        transform: translate(0, 0) scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes fade-in-circle {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
