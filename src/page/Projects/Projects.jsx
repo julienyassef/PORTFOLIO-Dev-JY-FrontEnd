@@ -38,7 +38,7 @@ function Projects() {
             projects.map((project, index) => (
               <div className='bodyprojects__sideSpacing__containerProjects__card' key={project.name}>
                 <div className='bodyprojects__sideSpacing__containerProjects__card__wrapperMedia'>
-                  {project.video ? (
+                  {/* {project.video ? (
                     <video
                       className='bodyprojects__sideSpacing__containerProjects__card__media'
                       src={`./assets/videos/${project.video}`}
@@ -47,13 +47,13 @@ function Projects() {
                       loop
                       muted
                       />
-                  ) : (
+                  ) : ( */}
                     <img
                       className='bodyprojects__sideSpacing__containerProjects__card__media'
                       src={`./assets/picture/${project.img}`}
                       alt={project.name}
                       />
-                  )}
+                  {/* )} */}
 
                 </div>
                 <div className='bodyprojects__sideSpacing__containerProjects__card__content'>
