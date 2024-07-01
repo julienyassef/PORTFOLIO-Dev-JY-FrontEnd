@@ -42,6 +42,11 @@
             color: var(--text-color);
             font-weight: 400;
             font-size: 1.1rem;
+            line-height: 1.6;
+
+            
+          
+
            
 
             & ul{
@@ -141,6 +146,7 @@
              margin-left: 5px;
              font-size: 0.8rem;
              align-self: center;
+             line-height: 2;
      
                 & ul {
                     grid-template-columns: 1fr;

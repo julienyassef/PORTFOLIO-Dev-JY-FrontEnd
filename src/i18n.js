@@ -306,7 +306,7 @@ const resources = {
           },
           {
               key: "skillsFourteen",
-              text: "Utilisation et gestion de bases de données (MongoDB)",
+              text: "Utilisation et gestion de bases de données",
           },
           {
               key: "skillsFifteen",
