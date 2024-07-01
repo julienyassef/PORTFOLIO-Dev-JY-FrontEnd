@@ -135,6 +135,7 @@ export const getContentProjectsMock = async () => {
         {
           "name": "Blog: Objectif-Dev",
           "img": "ObjectifDev.png",
+          "video": "VidéoObjectifDev.mov",
           "linkCode": "",
           "linkSite": "",
           "Desc": {

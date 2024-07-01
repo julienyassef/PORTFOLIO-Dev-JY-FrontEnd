@@ -21,6 +21,8 @@ function Projects() {
 
   const projects = dataProjects;
 
+  console.log(projects)
+
   const handleLearnMoreClick = (index) => {
     setSelectedProjectIndex(index);
     setModalOpen(true);
@@ -44,13 +46,13 @@ function Projects() {
                       autoPlay
                       loop
                       muted
-                    />
+                      />
                   ) : (
                     <img
                       className='bodyprojects__sideSpacing__containerProjects__card__media'
                       src={`./assets/picture/${project.img}`}
                       alt={project.name}
-                    />
+                      />
                   )}
 
                 </div>
