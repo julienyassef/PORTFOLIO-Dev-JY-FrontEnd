@@ -1,0 +1,40 @@
+// Import des variables
+@import '../../variables.css';
+
+
+.contact-info-item {
+    display: flex;
+    align-items: center;
+    gap: 10px; 
+    font-family: var(--primary-font);
+    gap: 1.2rem;
+    
+    &__icon {
+        background-color: var( --background-color-4);
+        width: 70px;
+        height: 70px;
+        border-radius: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;   
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        gap: 0.7rem;
+
+        &__title {
+            color:  var(--text-color-3); 
+            font-weight: 600;
+            font-size: 1rem
+        }
+        
+        &__data {
+            color:  var(--text-color-2); 
+            
+        }
+    }
+    
+}

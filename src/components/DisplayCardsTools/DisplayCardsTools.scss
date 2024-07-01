@@ -1,0 +1,66 @@
+// Import variables
+@import '../../variables.css';
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+
+    &__cardTool {
+        background-color: var(--background-color-card);
+        width: 260px;
+        height: 100px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-radius: 10px;
+        transition: transform 0.2s ease-in-out;
+
+        &:hover {
+            transform: scale(1.05);
+        }
+
+        &____containerLogo{
+            flex: 0 0 40%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+        }
+        &__logo{
+            width:100%;
+            padding-left: 30px;
+            height: 50px;
+           
+        }
+
+        &__name {
+            flex: 0 0 60%;
+            font-family: var(--primary-font);
+            font-weight: 800;
+            font-size: 1.2rem;
+            color: var(--text-color);
+            text-align: center;
+            padding-right: 2rem; // Optional: for better spacing
+        }
+    }
+}
+
+// Tablette
+@media only screen and (max-width: 1023px) {
+    .container {
+        gap: 1.5rem;
+
+      
+    }
+}
+
+// Mobile
+@media only screen and (max-width: 767px) {
+    .container {
+        gap: 1.5rem;
+
+      
+    }
+}

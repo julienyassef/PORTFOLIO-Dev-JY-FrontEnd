@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Sen:wght@400;700&display=swap');
+
+
+:root {
+    /* Variables pour le thème clair */
+    --background-color: #ffffff;
+    --background-color-2: #222222;  
+    --background-color-3: #ffffff; 
+    --background-color-4: #ffffff; 
+    --background-color-contact: #F4F4F4; 
+    --background-color-card: #F4F4F4; 
+    --text-color: #000000; 
+    --text-color-2 : #8F8F8F;
+    --text-color-3 : #2E2E2E;
+    --text-color-navbar : #8F8F8F;
+    --primary-color: #14A085;
+    --primary-color-hover: var(--primary-color);
+    --background-color-themeSwitcher: #000000;  
+    --text-color-themeSwitcher: #ffffff; 
+    --box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+    --box-shadow-modal: 0px 0px 10px rgba(0, 0, 0, 0.3);
+
+    /* Polices de caractères */
+    --primary-font: 'Sen', sans-serif;
+
+    /* Tailles de police */
+    --font-size-small: 0.8rem;
+    --font-size-medium: 1rem;
+    --font-size-large: 1.2rem;
+
+    /* Espacements */
+    --spacing-small: 8px;
+    --spacing-medium: 16px;
+    --spacing-large: 24px;
+   
+  }
+  
+  [data-theme="dark"] {
+    /* Variables pour le thème sombre */
+    --background-color: #222222;
+    --background-color-2: #222222;
+    --background-color-3: #2e2e2e;
+    --background-color-4: #2E2E2E; 
+    --background-color-contact: #222222; 
+    --background-color-card: #4b4c49; 
+    --text-color: #ffffff; 
+    --text-color-2 : #8F8F8F;
+    --text-color-3 : #c6c4c4;
+    --text-color-navbar : #ffffff;
+    --primary-color: #14A085;
+    --background-color-themeSwitcher: #ffffff;  
+    --text-color-themeSwitcher: #000000;
+    --box-shadow: 0px 2px 3px rgba(247, 247, 247, 0.143);
+    --box-shadow-modal: 0px 0px 3px rgba(209, 209, 209, 0.655);
+  }

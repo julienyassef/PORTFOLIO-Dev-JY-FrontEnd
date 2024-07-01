@@ -1,0 +1,84 @@
+.scroll-hint-button {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 35px;
+    height: 70px;
+    bottom: 100px;
+    z-index: 1000;
+    border-radius: 20px;
+    border: 2px solid;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  
+
+    .icon-arrow-scroll {
+        animation: iconHintSlideDown 2s ease-in-out infinite; 
+        margin-bottom: -12px; 
+      }
+}
+
+@keyframes iconHintSlideDown{
+    from {
+      transform: translateY(5px); 
+    }
+    to {
+      transform: translateY(20px); 
+    }
+  }
+
+
+
+//Tablette
+@media only screen and (max-width: 1023px) {
+
+  .scroll-hint-button {
+    width: 30px;
+    height: 65px;
+    border: 2px solid;
+
+
+    .icon-arrow-scroll {
+      animation: iconHintSlideDown 2s ease-in-out infinite; 
+      margin: 0 auto;
+      margin-bottom: -8px; 
+    
+      width: 18px; 
+      height: 18px;
+    }
+
+}
+  
+ 
+}
+
+//Mobile
+@media only screen and (max-width: 767px) {
+
+  .scroll-hint-button {
+    width: 25px;
+    height: 55px;
+    border: 2px solid;
+
+    .icon-arrow-scroll {
+      animation: iconHintSlideDown 2.2s ease-in-out infinite; 
+      margin: 0 auto;
+      margin-bottom: -8px; 
+    
+      width: 15px; 
+      height: 15px;
+    }
+}
+
+ 
+}
+
+
+
+
+
+
+

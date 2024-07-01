@@ -1,0 +1,86 @@
+name: 🚀 Deploy Website 🌐
+
+# Controls when the action will run. Workflow runs when manually triggered using the UI
+# or API.
+on:
+  push:
+    branches:
+      - master
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  setup:
+    name: 🛠️ Set up project
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v3
+
+      - name: Use Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+          cache: "npm"
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build
+        run: npm run build
+
+      - name: Archive artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: web-artifact
+          path: dist # dist is the folder where the build files are stored
+
+  deploy:
+    name: 🚀 Deploy Web
+    needs: setup
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Download artifacts
+        uses: actions/download-artifact@v3
+        with:
+          name: web-artifact
+          path: dist
+
+      - name: SFTP Deploy
+        uses: wlixcc/SFTP-Deploy-Action@v1.2.4
+        with:
+          # username
+          username: ${{ secrets.SSH_USERNAME }}
+          # your sftp server
+          server: ${{ secrets.SSH_HOST }}
+          # your sftp server port, default to 22
+          port: ${{ secrets.SSH_PORT }}
+          # you can copy private_key from your *.pem file, keep format
+          ssh_private_key:
+          # will put all file under this path
+          local_path: "dist/*"
+          # files will copy to under remote_path
+          remote_path: ${{ secrets.WEB_BUILD_REMOTE_PATH }}
+          # connection via sftp protocol only
+          sftp_only: # optional
+          # sftp args
+          sftpArgs: # optional
+          # This operation will delete all files in the remote path before upload. Please be careful set this to true
+          delete_remote_files: true
+          # SSH passsword，If a password is set, the secret key pair is ignored
+          password: ${{ secrets.SSH_PASSWORD }}
+
+      - name: SSH Connection to Server
+        uses: appleboy/ssh-action@v1.0.0
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USERNAME }}
+          password: ${{ secrets.SSH_PASSWORD }}
+          port: ${{ secrets.SSH_PORT }}
+          script: |
+            cd ${{ secrets.WEB_BUILD_REMOTE_PATH }}/../
+            rm -rf dist
+            mv newdist dist
+            docker compose down
+            docker compose up -d

@@ -1,0 +1,46 @@
+// Import des variables de style
+@import '../../variables.css';
+
+.legal-info {
+    width: 100vw;
+    min-height: 75vh;
+    padding: 120px 50px; 
+
+    display: flex;
+    flex-direction: column;
+    background-color: var(--background-color-3);
+
+    &__title {
+        color: var(--primary-color);
+        font-weight: 800;
+        font-size: 2rem;
+        margin-bottom: 2rem; 
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__section {
+        width: 100%; 
+        text-align: justify;
+        margin-bottom: 1.5rem; 
+        
+        &__titleSection {
+            color: var(--primary-color);
+            font-weight: 600;
+            font-size: 1.2rem;
+            margin-bottom: 1.4rem;
+            text-decoration: underline;
+
+        }
+
+        p {
+            margin-bottom: 0.4rem;
+            color: var(--text-color);
+            font-family: var(--primary-font);
+            line-height: 1.6; 
+        }
+    }
+
+
+}

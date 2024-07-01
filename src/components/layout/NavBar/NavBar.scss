@@ -1,0 +1,149 @@
+// Import variables
+@import '../../../variables.css';
+
+
+ //NavBar 
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: var(--primary-font);
+    padding: var(--spacing-small);
+    padding: 11px 20px;
+    box-shadow: var(--box-shadow);
+    z-index: 2000;
+
+    &__logoDesktop {
+        display:flex;
+    }
+
+    &__logoMobile {
+        display:none;
+    }
+
+    &__link {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 2.5rem;
+
+        &__icon {
+            text-decoration: none;
+            color: var(--text-color-navbar);
+            font-weight: bold;
+
+            &:hover {
+                color: var(--primary-color);
+            }
+        }
+
+        &__list{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 2.5rem;
+
+            &__item {
+                text-decoration: none;
+                color: var(--text-color-navbar);
+                font-weight: bold;
+    
+                &:hover {
+                    color: var(--primary-color);
+                }
+            }
+        }
+    }
+
+    &__wrapperTheme {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1.5rem;
+
+        &__language img, &__colorTheme img {
+            height: 25px;
+            cursor: pointer;
+        }
+
+        &__language {
+            cursor: pointer;
+        }
+    
+        &__colorTheme {
+            color: var(--primary-color);
+            cursor: pointer;
+            position: relative;
+        }
+    }
+
+    &__menuButton {
+        display: none; 
+    }
+    &__menuSetting {
+        display: none; 
+    }
+}
+
+//Tablette
+@media only screen and (max-width: 1023px) {
+    .navbar{
+        padding: 11px 30px;
+        &__logoDesktop {
+            display:none;
+        }
+        &__logoMobile {
+            display:flex;
+        }
+        &__menuButton {
+          display: flex;
+          background: none;
+          border: none;
+          cursor: pointer;
+          padding: 0;
+          align-items: center;
+          color: var(--text-color-navbar);
+    
+          &:hover {
+            color: var(--primary-color);
+            }   
+        }
+        &__menuSetting {
+            display: flex;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 0;
+            align-items: center;
+            color: var(--text-color-navbar);
+        
+            &:hover {
+                color: var(--primary-color);
+                } 
+
+        }
+        &__link {
+        
+            display: none;
+        }
+        &__wrapperTheme {
+            display: none;
+        } 
+    }
+  }
+
+
+
+//Mobile
+@media only screen and (max-width: 767px) {
+    .navbar{
+        padding: 11px 20px;
+    }
+  }
+

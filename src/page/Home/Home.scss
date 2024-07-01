@@ -1,0 +1,156 @@
+// Import variables
+@import '../../variables.css';
+
+.bodyHome {
+  width: 100vw;
+  min-height: 100vh;
+  height: auto; 
+  background-color: var(--background-color-3);
+  font-family: var(--primary-font);
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  flex-direction: column; 
+  gap: 5rem; 
+  
+  &__titles {
+    text-align: center;
+    margin-top: 120px; 
+    
+    &__name, &__job, &__job2, &__pick-upLine {
+      margin: 0; // Enlève les marges par défaut pour un alignement précis
+      padding: 0.7rem; 
+    }
+    
+    &__name {
+      color: var(--text-color-3);
+      font-weight: 600;
+      font-size: 1.75rem; 
+    }
+    
+    &__job {
+      color: var(--text-color);
+      font-weight: 800;
+      font-size: 4rem; 
+    }
+
+    &__job2 {
+      color: var(--text-color);
+      font-weight: 500;
+      font-size: 3.3rem; 
+    }
+    
+    &__pick-upLine {
+      color: var(--text-color-2);
+      font-weight: 600;
+      font-size: 1.5rem; 
+    }
+  }
+  &__containerNetworkLink {
+      display: flex;
+      justify-content: space-between;
+      max-width: 700px; 
+      width: 100%; 
+  }
+}
+
+.parallax-container {
+  position: relative;
+  width: 100%; 
+ 
+}
+
+
+
+//Tablette
+@media only screen and (max-width: 1023px) {
+  
+  .homeIconEmail .homeIconLinkedin .homeIconGithub {
+    width: 45px;
+    height: 45px;
+   
+  }
+
+
+.bodyHome {
+  min-height: 100vh;
+  gap: 4rem; 
+  
+  &__titles {
+    margin-top: 100px; 
+
+    &__name {
+      font-size: 1.6rem; 
+    }
+    
+    &__job { 
+      font-size: 3.5rem; 
+    }
+    &__job2 { 
+      font-size: 3rem; 
+    }
+    
+    &__pick-upLine {
+      font-size: 1.3rem; 
+    }
+  }
+  &__containerNetworkLink {
+      max-width: 500px; 
+      width: 100%; 
+  }
+}
+
+}
+
+//Mobile
+@media only screen and (max-width: 767px) {
+  
+
+  .homeIconEmail {
+    width: 25px;
+    height: 25px;
+  }
+
+  .homeIconGithub {
+    width: 25px;
+    height: 25px;
+  }
+
+  .homeIconLinkedin {
+    width: 25px;
+    height: 25px;
+  }
+
+
+.bodyHome {
+  min-height: 0vh;
+  gap: 3rem; 
+  
+  &__titles {
+    margin-top: 80px; 
+
+    &__name {
+      font-size: 1.2rem; 
+    }
+    
+    &__job { 
+      font-size: 2.8rem; 
+    }
+    &__job2 { 
+      font-size: 2.5rem; 
+    }
+    
+    &__pick-upLine {
+      font-size: 1.1rem; 
+    }
+  }
+  &__containerNetworkLink {
+      max-width: 250px; 
+      width: 100%; 
+  }
+}
+
+}
+
+
+

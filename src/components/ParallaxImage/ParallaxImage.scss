@@ -1,0 +1,47 @@
+// Import variables
+@import '../../variables.css';
+
+.parallax-image {
+    position: relative;
+  }
+
+.parallax-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white; 
+  width: 80%; 
+  text-align: center;
+  font-family: var(--primary-font);
+  font-weight: 800;
+  font-size: 2rem;
+  line-height: 50px;
+
+}
+
+
+//Tablette
+@media only screen and (max-width: 1023px) {
+
+  .parallax-text {
+    line-height: 35px;
+    font-size: 1.5rem;
+  }
+
+}
+
+//Mobile
+@media only screen and (max-width: 767px) {
+
+  .parallax-text {
+    line-height: 20px;
+    font-size: 1rem;
+  
+  }
+}
+
+
+
+
+  

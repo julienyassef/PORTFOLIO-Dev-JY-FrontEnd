@@ -1,0 +1,157 @@
+// Import variables
+@import '../../variables.css';
+
+
+.bodySkills{
+    padding-top: 60px;
+    width: 100vw;
+    height: auto; 
+    background-color: var(--background-color-3);
+    font-family: var(--primary-font);
+
+    &__sideSpacing {
+        padding: 0rem 5rem 3rem 5rem;
+        align-items: start;
+        display: flex;
+        flex-direction: column;
+        gap: 2.5rem;
+
+        &__h1 {
+            color: var(--primary-color);
+            font-weight: 800;
+            font-size: 2rem;
+            
+        }
+
+        &__h2 {
+            color: var(--text-color-2);
+            font-weight: 600;
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+        }
+
+        &__containerTools {
+            margin-bottom: 10px;
+
+        }
+
+        &__containerSkills {
+            display: flex;
+            align-self: center;
+            justify-content: center;
+            color: var(--text-color);
+            font-weight: 400;
+            font-size: 1.1rem;
+           
+
+            & ul{
+                display: grid;
+                grid-template-columns: repeat(2, 1fr); 
+                gap: 20px;
+                margin-bottom: 30px;
+    
+            }
+           
+        }
+      
+    }
+ 
+}
+
+.iconValid {
+    margin-right: 20px;
+}
+
+//Grand ecran
+@media only screen and (min-width: 1440px) {
+    
+    .bodySkills__sideSpacing__containerSkills ul { 
+        grid-template-columns: repeat(3, 1fr); 
+
+    }
+}
+
+@media only screen and (min-width: 1800px) {
+    
+    .bodySkills__sideSpacing__containerSkills ul { 
+        grid-template-columns: repeat(4, 1fr); 
+
+    }
+}
+
+
+//Tablette
+@media only screen and (max-width: 1023px) {
+
+    
+    .bodySkills{
+        
+        &__sideSpacing {
+            padding: 0rem 4rem 3rem 4rem;
+    
+            &__h1 {
+                font-size: 1.6rem;
+                
+            }
+    
+            &__h2 {
+
+                font-size: 1rem;
+            }
+    
+            &__containerSkills  {
+                margin-left: 50px;
+                align-self: start;
+                font-size: 1rem;
+              
+                & ul {
+                    grid-template-columns: 1fr;
+        
+                }
+    
+            }
+          
+        }
+     
+    }
+}
+
+//Mobile
+@media only screen and (max-width: 767px) {
+
+    
+    .bodySkills{
+        padding-top: 40px;
+        
+        &__sideSpacing {
+            padding: 0rem 1rem 3rem 1rem;
+
+            &__h1 {
+                padding-left: 3rem;
+                font-size: 1.4rem; 
+                margin-top: 0px;
+            }
+    
+            &__h2 {
+                padding-left: 3rem;
+                font-size: 0.9rem;
+            }
+
+            &__containerSkills  {
+             margin-left: 5px;
+             font-size: 0.8rem;
+             align-self: center;
+     
+                & ul {
+                    grid-template-columns: 1fr;
+        
+                }
+    
+            }
+    
+          
+        }
+     
+    }
+        
+}

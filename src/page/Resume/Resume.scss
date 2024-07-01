@@ -1,0 +1,118 @@
+// Import des variables
+@import '../../variables.css';
+
+.bodyresume{
+    padding-top: 60px;
+    width: 100vw;
+    height: auto; 
+    background-color: var(--background-color-3);
+    font-family: var(--primary-font);
+    
+    
+    &__sideSpacing {
+        padding: 0rem 5rem 3rem 5rem;
+        align-items: start;
+        display: flex;
+        flex-direction: column;
+        gap: 2.5rem;
+
+        &__title {
+            color: var(--primary-color);
+            font-weight: 800;
+            font-size: 2rem;
+            text-align: center;
+        }
+
+        &__containerResume {
+            width: 100%; 
+            display: flex; 
+            flex-direction: column;
+            justify-content: center; 
+            align-items: center;
+            gap: 3rem; 
+            
+            
+            &__displayResume {
+                border: 2px solid black;
+                width: 60vw;
+  
+             
+
+            }
+
+            &__downloadButton {
+                padding: 1rem 2rem;
+                background-color: var(--primary-color);
+                color: white; 
+                border: none; 
+                border-radius: 5px;
+                cursor: pointer;
+                font-family: var(--primary-font);
+                font-weight: 800;
+                font-size: 1rem;
+                text-transform: uppercase; 
+                letter-spacing: 0.05rem; 
+                
+                
+                &:hover {
+                    animation: pulse 1s infinite; 
+
+                }
+                
+            }
+
+        }
+    }       
+}  
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1); 
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+//Tablette
+@media only screen and (max-width: 1023px) {
+
+    .bodyresume{
+        padding-top: 80px;
+
+        &__sideSpacing {
+            padding: 0rem 4rem 3rem 4rem;
+
+            &__title {
+                font-size: 1.6rem;
+            }
+
+        }       
+    }   
+}
+
+//Mobile
+@media only screen and (max-width: 767px) {
+
+    .bodyresume{
+        padding-top: 40px;
+
+        &__sideSpacing {
+            padding: 0rem 1rem 1rem 1rem;
+
+            &__title {
+                padding-left: 3rem;
+                font-size: 1.4rem;
+               
+            }
+
+        }       
+    }   
+      
+}
+
+

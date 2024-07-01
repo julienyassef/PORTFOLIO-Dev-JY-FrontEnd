@@ -1,0 +1,19 @@
+// Import variables
+@import '../../variables.css';
+
+.themeSwitcher {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    width: 65px;
+    height: 22px;
+    border-radius: 5px;
+    background-color: var(--background-color-themeSwitcher);
+    color: var(--text-color-themeSwitcher);
+    font-family: var(--primary-font);
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: bold; 
+    cursor: pointer;
+  }
+  
