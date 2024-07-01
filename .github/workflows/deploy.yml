@@ -80,7 +80,9 @@ jobs:
           port: ${{ secrets.SSH_PORT }}
           script: |
             cd ${{ secrets.WEB_BUILD_REMOTE_PATH }}/../
+            mv dist/assets/videos videos
             rm -rf dist
             mv newdist dist
+            mv videos dist/assets/videos
             docker compose down
             docker compose up -d
