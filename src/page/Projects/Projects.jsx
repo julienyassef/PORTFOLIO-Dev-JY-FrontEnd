@@ -21,7 +21,7 @@ function Projects() {
 
   const projects = dataProjects;
 
-  console.log(projects)
+  console.log(projects);
 
   const handleLearnMoreClick = (index) => {
     setSelectedProjectIndex(index);
@@ -35,50 +35,54 @@ function Projects() {
         <p className='bodyprojects__sideSpacing__text'>{t('projects.explore')}</p>
         <div className='bodyprojects__sideSpacing__containerProjects'>
           {Array.isArray(projects) &&
-            projects.map((project, index) => (
-              <div className='bodyprojects__sideSpacing__containerProjects__card' key={project.name}>
-                <div className='bodyprojects__sideSpacing__containerProjects__card__wrapperMedia'>
-                  {/* {project.video ? (
-                    <video
-                      className='bodyprojects__sideSpacing__containerProjects__card__media'
-                      src={`./assets/videos/${project.video}`}
-                      alt={project.name}
-                      autoPlay
-                      loop
-                      muted
+            projects.map((project, index) => {
+              const videoPath = `assets/videos/${project.video}`;
+              console.log(`Trying to load video from: ${videoPath}`);
+              return (
+                <div className='bodyprojects__sideSpacing__containerProjects__card' key={project.name}>
+                  <div className='bodyprojects__sideSpacing__containerProjects__card__wrapperMedia'>
+                    {project.video ? (
+                      <video
+                        className='bodyprojects__sideSpacing__containerProjects__card__media'
+                        src={videoPath}
+                        alt={project.name}
+                        autoPlay
+                        loop
+                        muted
+                        onError={(e) => console.error('Error loading video:', e)}
                       />
-                  ) : ( */}
-                    <img
-                      className='bodyprojects__sideSpacing__containerProjects__card__media'
-                      src={`./assets/picture/${project.img}`}
-                      alt={project.name}
-                      />
-                  {/* )} */}
-
-                </div>
-                <div className='bodyprojects__sideSpacing__containerProjects__card__content'>
-                  <p className='bodyprojects__sideSpacing__containerProjects__card__content__title'>
-                    {project.name}
-                  </p>
-                  <ul className='bodyprojects__sideSpacing__containerProjects__card__content__listSkill'>
-                    {project.Skills.map((skill) => (
+                    ) : (
                       <img
-                        key={skill.id}
-                        className='bodyprojects__sideSpacing__containerProjects__card__content__listSkill__logo'
-                        src={`./assets/LogoTools/${skill.logo}`}
-                        alt={skill.name}
+                        className='bodyprojects__sideSpacing__containerProjects__card__media'
+                        src={`./assets/picture/${project.img}`}
+                        alt={project.name}
                       />
-                    ))}
-                  </ul>
-                  <button
-                    className='bodyprojects__sideSpacing__containerProjects__card__content__buttonMore'
-                    onClick={() => handleLearnMoreClick(index)}
-                  >
-                    {t('projects.learnMore')}
-                  </button>
+                    )}
+                  </div>
+                  <div className='bodyprojects__sideSpacing__containerProjects__card__content'>
+                    <p className='bodyprojects__sideSpacing__containerProjects__card__content__title'>
+                      {project.name}
+                    </p>
+                    <ul className='bodyprojects__sideSpacing__containerProjects__card__content__listSkill'>
+                      {project.Skills.map((skill) => (
+                        <img
+                          key={skill.id}
+                          className='bodyprojects__sideSpacing__containerProjects__card__content__listSkill__logo'
+                          src={`./assets/LogoTools/${skill.logo}`}
+                          alt={skill.name}
+                        />
+                      ))}
+                    </ul>
+                    <button
+                      className='bodyprojects__sideSpacing__containerProjects__card__content__buttonMore'
+                      onClick={() => handleLearnMoreClick(index)}
+                    >
+                      {t('projects.learnMore')}
+                    </button>
+                  </div>
                 </div>
-              </div>
-            ))}
+              );
+            })}
           {isModalOpen && (
             <ModalProjects
               projects={projects}
@@ -93,7 +97,7 @@ function Projects() {
         width='100%'
         initialHeight='197px'
         tabletHeight='150px'
-        mobileHeight='100px'
+        mobileHeight='100%'
         speedFactor={0.1}
         text={t('projects.pickUpLine')}
       />

@@ -79,7 +79,7 @@ const ModalProjects = ({ projects, selectedProjectIndex, onClose }) => {
                         <IconCrossClose />
                     </div>
                 </div>
-                {/* {project.video ? (
+                {project.video ? (
                     <video
                         className='modalProjects__media'
                         src={`./assets/videos/${project.video}`}
@@ -88,13 +88,13 @@ const ModalProjects = ({ projects, selectedProjectIndex, onClose }) => {
                         loop
                         muted
                     />
-                ) : ( */}
+                ) : (
                     <img
                         className='modalProjects__media'
                         src={`./assets/picture/${project.img}`}
                         alt={`Preview of ${project.name}`}
                     />
-                {/* )} */}
+                )}
                 <div className='modalProjects__content'>
                     <div className='modalProjects__content__desc'>
                         <h3 className='modalProjects__content__desc__title'>
