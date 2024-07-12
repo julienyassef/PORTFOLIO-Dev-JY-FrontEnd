@@ -45,7 +45,7 @@ const Contact = () => {
                       color="var(--primary-color)" 
                     />}
                     title={t('contact.phone')}
-                    data="07 69 96 36 59"
+                    data="** ** ** ** **"
                   />
                 <ContactInfoItem 
                     icon={<ArobaseIcon
