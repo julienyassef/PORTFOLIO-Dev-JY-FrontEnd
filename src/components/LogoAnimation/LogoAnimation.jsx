@@ -1,9 +1,9 @@
 import { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import './LogoAnimation.scss';
-import circle from '../../../public/assets/pictureAnimation/Ellipse.png'; 
-import letterY from '../../../public/assets/pictureAnimation/lettreY.png';
-import letterJ from '../../../public/assets/pictureAnimation/lettreJ.png';
+import circle from '/assets/pictureAnimation/Ellipse.png'; 
+import letterY from '/assets/pictureAnimation/lettreY.png';
+import letterJ from '/assets/pictureAnimation/lettreJ.png';
 
 const LogoAnimation = ({ onAnimationEnd }) => {
     useEffect(() => {
