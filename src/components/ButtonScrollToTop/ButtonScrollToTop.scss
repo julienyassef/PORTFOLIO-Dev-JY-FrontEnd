@@ -1,9 +1,12 @@
 // Import variables
 @import '../../variables.css';
+.toto {
+  display: flex;
+}
 
 .scrollToTopButton {
     display: flex;
-    //test
+   
     justify-content: center; 
     align-items: center; 
     padding: 0px 0px 2px 0px;
