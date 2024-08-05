@@ -1,6 +1,4 @@
-console.log('API Base URL:', import.meta.env.VITE_API_URL);
 const BASE_URL = import.meta.env.VITE_API_URL;
-console.log('Fetching from:', `${BASE_URL}/content/tools`);
 
 
 

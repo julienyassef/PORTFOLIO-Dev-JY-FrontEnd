@@ -21,7 +21,7 @@ function Projects() {
 
   const projects = dataProjects;
 
-  console.log(projects);
+  // console.log(projects);
 
   const handleLearnMoreClick = (index) => {
     setSelectedProjectIndex(index);
@@ -37,7 +37,7 @@ function Projects() {
           {Array.isArray(projects) &&
             projects.map((project, index) => {
               const videoPath = `assets/videos/${project.video}`;
-              console.log(`Trying to load video from: ${videoPath}`);
+              // console.log(`Trying to load video from: ${videoPath}`);
               return (
                 <div className='bodyprojects__sideSpacing__containerProjects__card' key={project.name}>
                   <div className='bodyprojects__sideSpacing__containerProjects__card__wrapperMedia'>

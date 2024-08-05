@@ -31,7 +31,7 @@ const ModalProjects = ({ projects, selectedProjectIndex, onClose }) => {
 
     useEffect(() => {
         document.body.classList.add('modal-open');
-        console.log('Current project:', project);
+        // console.log('Current project:', project);
         return () => {
             document.body.classList.remove('modal-open');
         };
